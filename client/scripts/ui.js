@@ -588,7 +588,7 @@ Events.on('load', () => {
     function drawCicrle(radius) {
         ctx.beginPath();
         var color = Math.round(255 * (1 - radius / Math.max(w, h)));
-        ctx.strokeStyle = 'rgba(' + color + ',' + color + ',' + color + ',0.1)';
+        ctx.strokeStyle = 'rgba(82, 147, 225, ' + ( 1 - radius / Math.max(w, h) ) + ')';
         ctx.arc(x0, y0, radius, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.lineWidth = 2;
